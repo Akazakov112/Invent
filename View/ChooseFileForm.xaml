@@ -1,0 +1,55 @@
+﻿<Window x:Class="Invent.ChooseFileForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Файлы инвентаризации" 
+        Height="300" 
+        Width="490"
+        WindowStartupLocation="CenterScreen"
+        Icon="pack://siteoforigin:,,,/Resources/datasheet.ico" 
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="173*"/>
+            <RowDefinition Height="58*"/>
+        </Grid.RowDefinitions>
+
+        <!--Листбокс выбора файлов работ-->
+        <ListBox x:Name="ListBox_chooseInvFile" Margin="5" MouseDoubleClick="ListBox_chooseInvFile_MouseDoubleClick"/>
+
+        <!--Панель кнопок-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+            <Button x:Name="Btn_selectFile"
+                    Style="{StaticResource AnotherButton}"
+                    Content="Выбрать файл"
+                    Margin="8"
+                    IsEnabled="False" 
+                    Click="Btn_selectFile_Click"/>
+
+            <Button x:Name="Btn_createNewFile"
+                    Style="{StaticResource AnotherButton}"
+                    Margin="8" 
+                    Click="Btn_createNewFile_Click">
+                <TextBlock TextAlignment="Center">Создать новый<LineBreak/>файл</TextBlock>
+            </Button>
+            
+            <Button x:Name="Btn_findFile"
+                    Style="{StaticResource AnotherButton}"
+                    Content="Обзор"
+                    Margin="8" 
+                    Click="Btn_findFile_Click"/>
+
+            <Button x:Name="Btn_deleteFile"
+                    Style="{StaticResource AnotherButton}"
+                    Content="Удалить файл"
+                    Margin="8" 
+                    Click="Btn_deleteFile_Click"/>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>

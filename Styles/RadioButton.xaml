@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Invent.Styles">
+
+    <Style x:Key="BaseRadioButton" TargetType="RadioButton">
+        
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}"/>
+        <Setter Property="FontSize" Value="{StaticResource Regular}"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="IsEnabled">
+            <Setter.Value>
+                <Binding ElementName="Btn_startSearch" Path="IsEnabled"/>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>

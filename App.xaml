@@ -1,0 +1,25 @@
+﻿<Application x:Class="Invent.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Invent"
+             StartupUri="View\MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="/Invent;component/Styles/Fonts.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/CellsStyle.xaml"/>
+                
+                <ResourceDictionary Source="/Invent;component/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/RadioButton.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/CheckBox.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/TextBox.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/TextBlock.xaml"/>
+                <ResourceDictionary Source="/Invent;component/Styles/Combobox.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

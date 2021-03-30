@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Invent.Styles">
+    
+    <Style x:Key="BaseTextBox" TargetType="TextBox">
+        
+        <Setter Property="FontFamily" Value="{StaticResource BaseFont}" />
+        <Setter Property="FontSize" Value="{StaticResource Regular}" />
+        <Setter Property="Background" Value="{StaticResource WhiteBaseBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource BlackBaseBrush}" />
+        <Setter Property="IsEnabled">
+            <Setter.Value>
+                <Binding ElementName="Btn_startSearch" Path="IsEnabled"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    
+                    <Border
+                        BorderBrush="{StaticResource DarkGreyBaseBrush}"
+                        BorderThickness="1"
+                        CornerRadius="8">
+                        <Grid Margin="5">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0" />
+                            <TextBlock
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                FontSize="{StaticResource Regular}"
+                                FontStyle="Italic"
+                                Foreground="{StaticResource DarkGreyBaseBrush}"
+                                IsHitTestVisible="False"
+                                Text="{TemplateBinding Tag}"
+                                TextAlignment="{TemplateBinding TextAlignment}"
+                                Visibility="Collapsed" />
+                        </Grid>
+                    </Border>
+                    
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,1261 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="BaseTextBlock"
+           TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="FontFamily"
+                    Value="{StaticResource BaseFont}" />
+            <Setter Property="FontSize"
+                    Value="{StaticResource Regular}" />
+            <Setter Property="Foreground"
+                    Value="{StaticResource BlackBaseBrush}" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+            <Setter Property="TextAlignment"
+                    Value="Left" />
+        </Style.Setters>
+    </Style>
+
+    <Style x:Key="RowNumCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NumRowColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="InvNumCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding InvNumColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NameCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NameColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TypeOsCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding TypeOsColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MarkaCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding MarkaColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SNCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SNColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DateCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding DateColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SostoyanieCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding SostoyanieColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OtvetstvenniyCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtvetstvenniyColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PodrazdelenieCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding PodrazdelenieColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OtdelCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding OtdelColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="CommentCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding CommentColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LocationCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding LocationColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="UserCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding UserColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NewUserCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewUserColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NewOtvCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding NewOtvColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="FactSnCol"
+           TargetType="{x:Type TextBlock}">
+        <Style.Triggers>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="White">
+                <Setter Property="Background"
+                        Value="White" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="В резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource PlumBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки">
+                <Setter Property="Background"
+                        Value="{StaticResource PowderBlueBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}"
+                         Value="Замена этикетки и в резерв">
+                <Setter Property="Background"
+                        Value="{StaticResource KhakiBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}"
+                         Value="Повтор">
+                <Setter Property="Background"
+                        Value="{StaticResource PinkBaseBrush}" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Red">
+                <Setter Property="Background"
+                        Value="Red" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Orange">
+                <Setter Property="Background"
+                        Value="Orange" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Yellow">
+                <Setter Property="Background"
+                        Value="Yellow" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Green">
+                <Setter Property="Background"
+                        Value="LightGreen" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Blue">
+                <Setter Property="Background"
+                        Value="DodgerBlue" />
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding FactSNColor}"
+                         Value="Purple">
+                <Setter Property="Background"
+                        Value="MediumPurple" />
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

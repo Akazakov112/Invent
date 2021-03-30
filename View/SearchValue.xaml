@@ -1,0 +1,66 @@
+﻿<Window x:Class="Invent.SearchValue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Поиск" 
+        Height="215" Width="285"
+        Icon="pack://siteoforigin:,,,/Resources/datasheet.ico" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize">
+
+    <Grid>
+        <StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Style="{StaticResource BaseTextBlock}"
+                           TextAlignment="Center"
+                           Text="Поиск в:"
+                           Margin="10,10,0,10"/>
+
+                <RadioButton x:Name="Rbtn_searchInDoc" 
+                             Content="В документе"
+                             Margin="10,10,0,10"
+                             IsChecked="True"/>
+
+                <RadioButton x:Name="Rbtn_searchInColumn" 
+                             Content="В столбце"
+                             Margin="10"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Style="{StaticResource BaseTextBlock}"
+                           TextAlignment="Center"
+                           Text="Искать  "
+                           Margin="10,10,0,10"/>
+
+                <RadioButton x:Name="Rbtn_searchUp" 
+                             Content="Сверху вниз"
+                             Margin="12,10,0,10"
+                             IsChecked="True"/>
+
+                <RadioButton x:Name="Rbtn_searchDown" 
+                             Content="Снизу вверх"
+                             Margin="12,10,0,10"/>
+
+            </StackPanel>
+
+            <TextBox x:Name="Txtbox_searchValue"
+                     Style="{StaticResource BaseTextBox}" 
+                     Tag="Введите значение"
+                     Margin="10"/>
+
+            <Button x:Name="Btn_searchValue"
+                    Style="{StaticResource AnotherButton}" 
+                    Content="Найти"
+                    IsDefault="True"
+                    Margin="5" 
+                    Click="Btn_searchValue_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

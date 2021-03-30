@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Invent.Styles">
+
+    <Style x:Key="CellGrid" TargetType="DataGridCell">
+        
+        <Style.Triggers>
+
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Trigger>
+
+            <DataTrigger Binding="{Binding StatusRec}" Value="">
+                <Setter Property="Background" Value="{StaticResource WhiteBaseBrush}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}" Value="">
+                <Setter Property="Background" Value="{StaticResource WhiteBaseBrush}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}" Value="В резерв">
+                <Setter Property="Background" Value="{StaticResource PlumBaseBrush}"/>
+            </DataTrigger>
+            
+            <DataTrigger Binding="{Binding StatusRec}" Value="Замена этикетки">
+                <Setter Property="Background" Value="{StaticResource PowderBlueBaseBrush}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding StatusRec}" Value="Замена этикетки и в резерв">
+                <Setter Property="Background" Value="{StaticResource KhakiBaseBrush}"/>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding RepeatRec}" Value="Повтор">
+                <Setter Property="Background" Value="{StaticResource PinkBaseBrush}"/>
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>

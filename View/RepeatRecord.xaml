@@ -1,0 +1,44 @@
+﻿<Window x:Class="Invent.RepeatRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Инвентаризация" 
+        Height="230" 
+        Width="390" 
+        Icon="pack://siteoforigin:,,,/Resources/datasheet.ico" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="Txtblock_sovpadenieDesc" 
+                   Style="{StaticResource BaseTextBlock}"
+                   FontSize="{StaticResource High}"
+                   Margin="10"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+
+            <Button x:Name="Btn_accept"
+                    Style="{StaticResource AnotherButton}"
+                    Content="Записать"
+                    Margin="50,10,10,5"
+                    Click="Btn_accept_Click"/>
+
+            <Button x:Name="Btn_skip" 
+                    Style="{StaticResource AnotherButton}"
+                    Content="Пропустить" 
+                    Margin="65,10,10,5"
+                    IsCancel="True"/>
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>

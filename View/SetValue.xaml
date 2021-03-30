@@ -1,0 +1,32 @@
+﻿<Window x:Class="Invent.SetValue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Установить значение" 
+        Height="145" Width="285"
+        Icon="pack://siteoforigin:,,,/Resources/datasheet.ico" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize">
+
+    <Grid>
+        
+        <StackPanel>
+
+            <TextBox x:Name="Txtbox_setValue"
+                     Style="{StaticResource BaseTextBox}" 
+                     Tag="Введите значение"
+                     Margin="10"/>
+
+            <Button x:Name="Btn_setValue"
+                    Style="{StaticResource AnotherButton}" 
+                    Content="Записать"
+                    IsDefault="True"
+                    Margin="5" 
+                    Click="Btn_setValue_Click"/>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Invent.Styles">
+
+    <!--Оттенки белого-->
+
+    <SolidColorBrush x:Key="BlackBaseBrush" Color="#000000" />
+
+    <SolidColorBrush x:Key="DarkGreyBaseBrush" Color="#A9A9A9" />
+
+    <SolidColorBrush x:Key="LightGreyBaseBrush" Color="#D3D3D3" />
+
+    <SolidColorBrush x:Key="WhiteBaseBrush" Color="#FFFFFF" />
+
+    <!--Красные оттенки-->
+
+    <SolidColorBrush x:Key="RedBaseBrush" Color="#FF0000" />
+
+    <SolidColorBrush x:Key="PinkBaseBrush" Color="#FFC0CB" />
+
+    <SolidColorBrush x:Key="RedBanButtonBrush" Color="#FF496C" />
+
+    <!--Синие оттенки-->
+
+    <SolidColorBrush x:Key="PowderBlueBaseBrush" Color="#B0E0E6" />
+
+    <!--Желтые оттенки-->
+
+    <SolidColorBrush x:Key="YellowBaseBrush" Color="#fcaf17" />
+
+    <SolidColorBrush x:Key="KhakiBaseBrush" Color="#F0E68C" />
+
+    <!--Зеленые оттенки-->
+
+    <SolidColorBrush x:Key="GreenBanButtoneBrush" Color="#95FF7A" />
+
+    <!--Фиолетовые оттенки-->
+
+    <SolidColorBrush x:Key="PlumBaseBrush" Color="#DDA0DD" />
+
+</ResourceDictionary>

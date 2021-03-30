@@ -1,0 +1,37 @@
+﻿<Window x:Class="Invent.AboutProg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="О программе"
+        Height="200"
+        Width="300"
+        Icon="pack://siteoforigin:,,,/Resources/datasheet.ico"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid>
+
+        <StackPanel Grid.Column="1">
+
+            <TextBlock Style="{StaticResource BaseTextBlock}"
+                       Margin="10,15,0,0"
+                       HorizontalAlignment="Center">
+            Invent<LineBreak />
+            Версия 1.4<LineBreak />
+            Казаков Андрей Александрович<LineBreak /><LineBreak />
+            Программа для проведения инвентаризаций.
+            </TextBlock>
+
+            <Button Style="{StaticResource AnotherButton}"
+                    IsEnabled="True"
+                    HorizontalAlignment="Center"
+                    Margin="10"
+                    Content="Закрыть"
+                    Click="Button_Click" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>
